@@ -11,7 +11,7 @@ Devvit.configure({
 
 // Add a custom post type to Devvit
 Devvit.addCustomPostType({
-  name: 'Web View Example',
+  name: 'Slice n Conquer',
   height: 'tall',
   render: (context) => {
     // Load username with `useAsync` hook
@@ -68,30 +68,26 @@ Devvit.addCustomPostType({
     return (
       <vstack grow padding="small">
         <vstack grow alignment="middle center">
-          <text size="xlarge" weight="bold">
-            Example App
+          <text size="large" weight="regular">
+            Hi u/{username.toLowerCase()}! 
           </text>
+          <text size="large" weight="regular">
+            Let's play
+          </text>
+          <spacer height="30%"/>
+          <text size="xxlarge" weight="bold">
+            Conquer
+          </text>
+          <spacer height="20%"/>
           <spacer />
-          <vstack alignment="start middle">
-            <hstack>
-              <text size="medium">Username:</text>
-              <text size="medium" weight="bold">
-                {' '}
-                {username ?? ''}
-              </text>
-            </hstack>
-            <hstack>
-              <text size="medium">Current counter:</text>
-              <text size="medium" weight="bold">
-                {' '}
-                {counter ?? ''}
-              </text>
-            </hstack>
-          </vstack>
-          <spacer />
-          <button onPress={() => webView.mount()}>Play!</button>
-          <spacer />
-          <button onPress={() => webView.mount()}>Play!</button>
+          <button onPress={() => {
+            // Add your "How to play" logic here
+            context.ui.showToast('How to play instructions coming soon!');
+          }}>
+            How to play
+          </button>
+          <spacer height="10%"/>
+          <button onPress={() => webView.mount()}>Start game</button>
         </vstack>
       </vstack>
     );
