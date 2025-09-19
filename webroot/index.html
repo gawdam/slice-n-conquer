@@ -8,9 +8,52 @@
 </head>
 <body>
     <div class="container">
+        <img src="logo2.png" alt="Game Logo" class="logo">
         <canvas id="canvas"></canvas>
-        <div id="zoom-indicator" title="Click to reset view">1x</div>
+        <div id="zoom-indicator" class="zoom-indicator" title="Click to reset view">
+            1x
+        </div>
+        <div id="max-score" class="score-display max-score">
+            Max Score: 0
+        </div>
+        <div id="player-score" class="score-display player-score">
+            Score: 0
+        </div>
+        <div id="health-bar-container" class="health-bar-container">
+            <div id="health-bar" class="health-bar"></div>
+            <span id="health-bar-text" class="health-bar-text">0 / 0</span>
+        </div>
+        <div id="game-over-overlay" class="game-over-overlay" style="display: none;">
+            <div class="game-over-content">
+                <h1 class="game-over-title">GAME OVER!</h1>
+                <div class="final-score">
+                    <div class="score-label">Final Score</div>
+                    <div id="final-score-value" class="score-value">0</div>
+                    <div class="score-breakdown">
+                        <div id="final-max-score" class="max-score-text">out of 0 possible</div>
+                    </div>
+                </div>
+                <button id="play-again-btn" class="play-again-button">
+                    PLAY AGAIN
+                </button>
+            </div>
+        </div>
+        <button id="submit-btn" class="submit-button" title="Submit your drawing" disabled>
+            SLICE
+        </button>
+        <button id="reset-btn" class="reset-button" title="Reset the map to initial state">
+            ↻
+        </button>
+        <button id="clear-btn" class="clear-button" title="Clear the map">
+            ⃠  
+        </button>
+        <div id="loading-screen" class="loading-screen">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Loading Map...</div>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 </html>

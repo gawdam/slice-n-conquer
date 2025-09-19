@@ -1,15 +1,19 @@
 {
   "name": "canvas-drawing-app",
   "version": "1.0.0",
-  "description": "Simple canvas drawing application",
+  "description": "A simple canvas drawing application",
   "main": "index.html",
   "scripts": {
-    "dev": "http-server . -p 3000 -o"
+    "dev": "live-server --port=3000 --open=index.html"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "live-server": "^1.2.2"
   },
-  "keywords": ["canvas", "drawing", "html", "javascript"],
-  "author": "",
-  "license": "MIT"
+  "keywords": [
+    "canvas",
+    "drawing",
+    "html",
+    "css",
+    "javascript"
+  ]
 }
